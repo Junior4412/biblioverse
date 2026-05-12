@@ -100,7 +100,7 @@ export function FeedPage() {
         {/* Main Feed */}
         <main className="lg:col-span-6 space-y-6">
           {/* Tabs */}
-          <div className="flex items-center gap-1 p-1 bg-zinc-900 rounded-xl border border-zinc-800">
+          <div className="flex items-center gap-1 p-1 rounded-xl border border-zinc-800" style={{background: "var(--tab-bg, #18181B)"}}>
             {tabs.map(({ id, label, icon: Icon }) => (
               <button
                 key={id}

@@ -48,7 +48,7 @@ export function ReviewCard({ review }: ReviewCardProps) {
 
       {/* Book reference */}
       <Link to={`/books/${review.book.id}`}>
-        <div className="flex items-center gap-3 p-3 rounded-lg bg-zinc-900/60 border border-zinc-800 hover:border-zinc-700 transition-colors">
+        <div className="flex items-center gap-3 p-3 rounded-lg bg-zinc-900/60 border border-zinc-800 dark:bg-zinc-900/60 hover:border-zinc-700 transition-colors">
           <img
             src={review.book.cover}
             alt={review.book.title}

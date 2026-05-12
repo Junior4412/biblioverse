@@ -48,7 +48,7 @@ export function LoginPage() {
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-zinc-300 mb-1.5">Email</label>
+              <label className="block text-sm font-medium mb-1.5" style={{color: 'inherit'}}>Email</label>
               <input
                 type="email"
                 value={email}
@@ -60,7 +60,7 @@ export function LoginPage() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-zinc-300 mb-1.5">Senha</label>
+              <label className="block text-sm font-medium mb-1.5" style={{color: 'inherit'}}>Senha</label>
               <div className="relative">
                 <input
                   type={showPassword ? 'text' : 'password'}

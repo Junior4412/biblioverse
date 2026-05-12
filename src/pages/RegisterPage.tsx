@@ -86,23 +86,23 @@ export function RegisterPage() {
             <>
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-zinc-300 mb-1.5">Nome</label>
+                  <label className="block text-sm font-medium mb-1.5" style={{color: 'inherit'}}>Nome</label>
                   <input value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })}
                     placeholder="Seu nome" className="input-base" required />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-zinc-300 mb-1.5">Username</label>
+                  <label className="block text-sm font-medium mb-1.5" style={{color: 'inherit'}}>Username</label>
                   <input value={form.username} onChange={(e) => setForm({ ...form, username: e.target.value })}
                     placeholder="@usuario" className="input-base" required />
                 </div>
               </div>
               <div>
-                <label className="block text-sm font-medium text-zinc-300 mb-1.5">Email</label>
+                <label className="block text-sm font-medium mb-1.5" style={{color: 'inherit'}}>Email</label>
                 <input type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })}
                   placeholder="seu@email.com" className="input-base" required />
               </div>
               <div>
-                <label className="block text-sm font-medium text-zinc-300 mb-1.5">Senha</label>
+                <label className="block text-sm font-medium mb-1.5" style={{color: 'inherit'}}>Senha</label>
                 <div className="relative">
                   <input type={showPassword ? 'text' : 'password'} value={form.password}
                     onChange={(e) => setForm({ ...form, password: e.target.value })}
@@ -127,18 +127,18 @@ export function RegisterPage() {
             <>
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-zinc-300 mb-1.5">Profissão</label>
+                  <label className="block text-sm font-medium mb-1.5" style={{color: 'inherit'}}>Profissão</label>
                   <input value={form.profession} onChange={(e) => setForm({ ...form, profession: e.target.value })}
                     placeholder="Ex: Designer" className="input-base" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-zinc-300 mb-1.5">Cidade</label>
+                  <label className="block text-sm font-medium mb-1.5" style={{color: 'inherit'}}>Cidade</label>
                   <input value={form.city} onChange={(e) => setForm({ ...form, city: e.target.value })}
                     placeholder="Ex: São Paulo" className="input-base" />
                 </div>
               </div>
               <div>
-                <label className="block text-sm font-medium text-zinc-300 mb-1.5">Bio <span className="text-zinc-600">(opcional)</span></label>
+                <label className="block text-sm font-medium mb-1.5" style={{color: 'inherit'}}>Bio <span className="text-zinc-600">(opcional)</span></label>
                 <textarea value={form.bio} onChange={(e) => setForm({ ...form, bio: e.target.value })}
                   placeholder="Conte um pouco sobre você e seus gostos literários..."
                   className="input-base resize-none h-28" />
