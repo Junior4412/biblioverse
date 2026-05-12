@@ -250,56 +250,201 @@
 }
 
 /* ── Light mode overrides ── */
+
 html.light body {
+
   background-color: #F4F4F5;
+
   color: #18181B;
+
 }
 
 html.light .card-base {
+
   background: #FFFFFF;
+
   border-color: #E4E4E7;
+
+  color: #18181B;
+
 }
 
 html.light .card-base:hover {
+
   background: #FAFAFA;
+
   border-color: #A1A1AA;
+
 }
 
+/* Navbar e painéis flutuantes */
+
 html.light .glass {
-  background: rgba(244, 244, 245, 0.9);
-  border-color: rgba(228, 228, 231, 0.8);
+
+  background: rgba(255, 255, 255, 0.95);
+
+  border-color: rgba(228, 228, 231, 0.9);
+
 }
 
 html.light .glass-light {
-  background: rgba(255, 255, 255, 0.95);
-  border-color: rgba(228, 228, 231, 0.8);
+
+  background: rgba(255, 255, 255, 0.98);
+
+  border-color: #E4E4E7;
+
 }
 
-html.light .nav-link {
+/* Painel de notificações e dropdowns */
+
+html.light [class*="border-zinc-800"] {
+
+  border-color: #E4E4E7;
+
+}
+
+html.light .bg-zinc-950\/95,
+
+html.light .bg-zinc-950\/50 {
+
+  background-color: rgba(255, 255, 255, 0.98);
+
+}
+
+html.light .bg-zinc-900\/40,
+
+html.light .bg-zinc-900\/50 {
+
+  background-color: rgba(244, 244, 245, 0.8);
+
+}
+
+/* Textos */
+
+html.light .text-foreground,
+
+html.light .text-zinc-300,
+
+html.light .text-zinc-200 {
+
+  color: #18181B;
+
+}
+
+html.light .text-zinc-400 {
+
   color: #52525B;
+
+}
+
+html.light .text-zinc-500,
+
+html.light .text-zinc-600 {
+
+  color: #71717A;
+
+}
+
+html.light .text-muted {
+
+  color: #71717A;
+
+}
+
+/* Nav links */
+
+html.light .nav-link {
+
+  color: #52525B;
+
 }
 
 html.light .nav-link:hover {
+
   color: #18181B;
+
   background: rgba(0, 0, 0, 0.06);
+
 }
 
 html.light .nav-link.active {
+
   color: #7C3AED;
+
   background: rgba(124, 58, 237, 0.08);
+
 }
 
+/* Botões ghost */
+
 html.light .btn-ghost {
+
   border-color: #D4D4D8;
+
   color: #52525B;
+
 }
 
 html.light .btn-ghost:hover {
+
   border-color: #A1A1AA;
+
   color: #18181B;
+
   background: rgba(0, 0, 0, 0.05);
+
 }
 
+/* Inputs */
+
+html.light input,
+
+html.light textarea,
+
+html.light select {
+
+  color: #18181B;
+
+  background-color: #FFFFFF;
+
+  border-color: #D4D4D8;
+
+}
+
+html.light input::placeholder,
+
+html.light textarea::placeholder {
+
+  color: #A1A1AA;
+
+}
+
+/* Notificações — fundo e hover */
+
+html.light .animate-slide-down {
+
+  background: #FFFFFF;
+
+  border-color: #E4E4E7;
+
+}
+
+html.light .hover\:bg-white\/4:hover {
+
+  background: rgba(0, 0, 0, 0.04);
+
+}
+
+html.light .bg-violet-500\/5 {
+
+  background: rgba(124, 58, 237, 0.06);
+
+}
+
+/* Scrollbar */
+
 html.light * {
+
   scrollbar-color: #D4D4D8 transparent;
+
 }
