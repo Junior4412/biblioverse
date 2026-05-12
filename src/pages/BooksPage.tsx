@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { Search, SlidersHorizontal, Grid, List, Star, TrendingUp } from 'lucide-react'
 import { BookCard } from '../shared/components/ui/BookCard'
 import { Badge } from '../shared/components/ui/Badge'
@@ -9,7 +10,18 @@ const genreOptions = ['Todos', ...GENRES.map((g) => g.name)]
 
 export function BooksPage() {
   const [query, setQuery] = useState('')
-  const [selectedGenre, setSelectedGenre] = useState('Todos')
+  const [searchParams] = useSearchParams()
+  const [selectedGenre, setSelectedGenre] = useState(() => {
+    const g = searchParams.get('genre')
+    return g && genreOptions.includes(g) ? g : 'Todos'
+  })
+
+  useEffect(() => {
+    const q = searchParams.get('q')
+    if (q) setQuery(q)
+    const g = searchParams.get('genre')
+    if (g && genreOptions.includes(g)) setSelectedGenre(g)
+  }, [searchParams])
   const [sort, setSort] = useState('Relevância')
   const [view, setView] = useState<'grid' | 'list'>('grid')
   const [filtersOpen, setFiltersOpen] = useState(false)

@@ -1,6 +1,30 @@
 import { Link } from 'react-router-dom'
 import { BookOpen, Github, Twitter, Instagram } from 'lucide-react'
 
+const platformLinks = [
+  { label: 'Feed', to: '/feed' },
+  { label: 'Explorar Livros', to: '/books' },
+  { label: 'Bibliotecas', to: '/libraries' },
+  { label: 'Gêneros', to: '/genres' },
+  { label: 'Dashboard', to: '/dashboard' },
+]
+
+const communityLinks = [
+  { label: 'Reviews', to: '/books' },
+  { label: 'Rankings', to: '/books' },
+  { label: 'Badges', to: '/dashboard' },
+  { label: 'Metas de Leitura', to: '/dashboard' },
+  { label: 'Clubes', to: '/feed' },
+]
+
+const companyLinks = [
+  { label: 'Sobre', to: '/' },
+  { label: 'Blog', to: '/' },
+  { label: 'Contato', to: '/' },
+  { label: 'Termos de Uso', to: '/' },
+  { label: 'Privacidade', to: '/' },
+]
+
 export function Footer() {
   return (
     <footer className="border-t border-zinc-800 bg-zinc-950/50 mt-20">
@@ -20,47 +44,49 @@ export function Footer() {
               A plataforma social para amantes de livros. Descubra, avalie e compartilhe suas leituras.
             </p>
             <div className="flex items-center gap-3 mt-5">
-              <a href="#" className="p-2 rounded-lg text-zinc-600 hover:text-zinc-400 hover:bg-zinc-800 transition-all">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg text-zinc-600 hover:text-zinc-400 hover:bg-zinc-800 transition-all">
                 <Github size={16} />
               </a>
-              <a href="#" className="p-2 rounded-lg text-zinc-600 hover:text-zinc-400 hover:bg-zinc-800 transition-all">
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg text-zinc-600 hover:text-zinc-400 hover:bg-zinc-800 transition-all">
                 <Twitter size={16} />
               </a>
-              <a href="#" className="p-2 rounded-lg text-zinc-600 hover:text-zinc-400 hover:bg-zinc-800 transition-all">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg text-zinc-600 hover:text-zinc-400 hover:bg-zinc-800 transition-all">
                 <Instagram size={16} />
               </a>
             </div>
           </div>
 
-          {/* Links */}
+          {/* Plataforma */}
           <div>
             <h4 className="text-sm font-semibold text-foreground mb-4">Plataforma</h4>
             <ul className="space-y-2.5">
-              {['Feed', 'Explorar Livros', 'Bibliotecas', 'Gêneros', 'Dashboard'].map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-sm text-zinc-500 hover:text-zinc-300 transition-colors">{item}</a>
+              {platformLinks.map(({ label, to }) => (
+                <li key={label}>
+                  <Link to={to} className="text-sm text-zinc-500 hover:text-zinc-300 transition-colors">{label}</Link>
                 </li>
               ))}
             </ul>
           </div>
 
+          {/* Comunidade */}
           <div>
             <h4 className="text-sm font-semibold text-foreground mb-4">Comunidade</h4>
             <ul className="space-y-2.5">
-              {['Reviews', 'Rankings', 'Badges', 'Metas de Leitura', 'Clubes'].map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-sm text-zinc-500 hover:text-zinc-300 transition-colors">{item}</a>
+              {communityLinks.map(({ label, to }) => (
+                <li key={label}>
+                  <Link to={to} className="text-sm text-zinc-500 hover:text-zinc-300 transition-colors">{label}</Link>
                 </li>
               ))}
             </ul>
           </div>
 
+          {/* Empresa */}
           <div>
             <h4 className="text-sm font-semibold text-foreground mb-4">Empresa</h4>
             <ul className="space-y-2.5">
-              {['Sobre', 'Blog', 'Contato', 'Termos de Uso', 'Privacidade'].map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-sm text-zinc-500 hover:text-zinc-300 transition-colors">{item}</a>
+              {companyLinks.map(({ label, to }) => (
+                <li key={label}>
+                  <Link to={to} className="text-sm text-zinc-500 hover:text-zinc-300 transition-colors">{label}</Link>
                 </li>
               ))}
             </ul>

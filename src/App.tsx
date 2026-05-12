@@ -7,6 +7,9 @@ import { BookDetailsPage } from './pages/BookDetailsPage'
 import { FeedPage } from './pages/FeedPage'
 import { LoginPage } from './pages/LoginPage'
 import { RegisterPage } from './pages/RegisterPage'
+import { DashboardPage } from './pages/DashboardPage'
+import { GenresPage } from './pages/GenresPage'
+import { LibrariesPage } from './pages/LibrariesPage'
 
 export default function App() {
   return (
@@ -29,6 +32,9 @@ export default function App() {
           <Route path="/feed" element={<FeedPage />} />
           <Route path="/books" element={<BooksPage />} />
           <Route path="/books/:id" element={<BookDetailsPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/genres" element={<GenresPage />} />
+          <Route path="/libraries" element={<LibrariesPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>

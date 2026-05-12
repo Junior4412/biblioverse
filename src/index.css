@@ -208,3 +208,58 @@
     to { opacity: 1; transform: translateY(0); }
   }
 }
+
+/* ── Light mode overrides ── */
+html.light body {
+  background-color: #F4F4F5;
+  color: #18181B;
+}
+
+html.light .card-base {
+  background: #FFFFFF;
+  border-color: #E4E4E7;
+}
+
+html.light .card-base:hover {
+  background: #FAFAFA;
+  border-color: #A1A1AA;
+}
+
+html.light .glass {
+  background: rgba(244, 244, 245, 0.9);
+  border-color: rgba(228, 228, 231, 0.8);
+}
+
+html.light .glass-light {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(228, 228, 231, 0.8);
+}
+
+html.light .nav-link {
+  color: #52525B;
+}
+
+html.light .nav-link:hover {
+  color: #18181B;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+html.light .nav-link.active {
+  color: #7C3AED;
+  background: rgba(124, 58, 237, 0.08);
+}
+
+html.light .btn-ghost {
+  border-color: #D4D4D8;
+  color: #52525B;
+}
+
+html.light .btn-ghost:hover {
+  border-color: #A1A1AA;
+  color: #18181B;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+html.light * {
+  scrollbar-color: #D4D4D8 transparent;
+}

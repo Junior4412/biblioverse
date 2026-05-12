@@ -1,53 +1,93 @@
 # BiblioVerse 📚
 
-Plataforma social para amantes de livros — descubra, avalie e conecte-se.
+A plataforma social para amantes de livros. Descubra, avalie e compartilhe suas leituras.
 
-## Como rodar localmente
+## 🚀 Como subir no GitHub
+
+### 1. Pré-requisitos
+- Node.js 18+
+- Git instalado
+- Conta no GitHub
+
+### 2. Instalar dependências e testar localmente
 
 ```bash
 npm install
 npm run dev
 ```
 
-Abra http://localhost:5173
+Acesse `http://localhost:5173`
 
-## Como fazer o build
+### 3. Criar repositório no GitHub
+
+**Via interface web:**
+1. Acesse https://github.com/new
+2. Defina um nome (ex: `biblioverse`)
+3. Deixe **sem** README (o projeto já tem)
+4. Clique em "Create repository"
+
+**Via GitHub CLI (alternativa):**
+```bash
+gh repo create biblioverse --public --source=. --remote=origin --push
+```
+
+### 4. Subir o código
 
 ```bash
-npm run build
-npm run preview
+# Dentro da pasta do projeto:
+git init
+git add .
+git commit -m "feat: BiblioVerse - plataforma social de leitura"
+git branch -M main
+git remote add origin https://github.com/SEU_USUARIO/biblioverse.git
+git push -u origin main
 ```
 
-## Deploy no Vercel
+> Substitua `SEU_USUARIO` pelo seu nome de usuário no GitHub.
 
-1. Faça push deste repositório para o GitHub
-2. Acesse https://vercel.com/new
-3. Importe o repositório
-4. Clique em **Deploy** — sem nenhuma configuração adicional
+### 5. Deploy no Vercel (recomendado)
 
-O `vercel.json` já configura o roteamento SPA automaticamente.
+```bash
+# Instale o Vercel CLI
+npm i -g vercel
 
-## Estrutura do projeto
-
+# Faça o deploy
+vercel --prod
 ```
-src/
-├── App.tsx              # Roteamento principal
-├── main.tsx             # Entry point
-├── index.css            # Estilos globais + Tailwind
-├── layouts/
-│   └── MainLayout.tsx   # Layout com Navbar + Footer
-├── pages/
-│   ├── HomePage.tsx     # Landing page
-│   ├── FeedPage.tsx     # Feed de reviews
-│   ├── BooksPage.tsx    # Explorar livros
-│   ├── BookDetailsPage.tsx  # Detalhes do livro
-│   ├── LoginPage.tsx    # Login
-│   └── RegisterPage.tsx # Cadastro
-├── shared/
-│   ├── components/ui/   # Componentes reutilizáveis
-│   ├── constants/       # mockData.ts
-│   ├── types/           # TypeScript types
-│   └── utils.ts         # Funções utilitárias
-└── store/
-    └── index.ts         # Estado global (Zustand)
-```
+
+Ou conecte seu repositório diretamente em https://vercel.com/new
+
+O arquivo `vercel.json` já está configurado corretamente para SPA com React Router.
+
+---
+
+## 🛠️ Stack
+
+- **React 18** + **TypeScript**
+- **Vite** — bundler
+- **Tailwind CSS** — estilização
+- **React Router v6** — roteamento
+- **Zustand** — gerenciamento de estado
+- **Lucide React** — ícones
+
+## 📄 Páginas disponíveis
+
+| Rota | Página |
+|---|---|
+| `/` | Home |
+| `/feed` | Feed de atividades |
+| `/books` | Explorar livros |
+| `/books/:id` | Detalhes do livro |
+| `/dashboard` | Dashboard pessoal |
+| `/genres` | Explorar por gênero |
+| `/libraries` | Bibliotecas |
+| `/login` | Login |
+| `/register` | Cadastro |
+
+## ✅ Correções aplicadas
+
+1. **Rotas faltando** — `/dashboard`, `/genres` e `/libraries` agora funcionam com páginas próprias
+2. **Notificações** — painel dropdown funcional com mock de notificações e botão "marcar como lidas"
+3. **Modo claro/escuro** — toggle aplica classe CSS no `<html>` com variáveis visuais para ambos os temas
+4. **Footer** — todos os links agora usam `<Link>` do React Router e navegam corretamente
+5. **Gêneros → Livros** — links da página de gêneros filtram automaticamente a página de livros via `?genre=`
