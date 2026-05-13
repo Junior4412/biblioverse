@@ -3,6 +3,7 @@
 A plataforma social para amantes de livros. Descubra, avalie e compartilhe suas leituras.
 
 ## 🚀 Como subir no GitHub
+## teste deploy
 
 ### 1. Pré-requisitos
 - Node.js 18+
