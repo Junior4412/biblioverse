@@ -29,7 +29,7 @@
   input, textarea, select {
     color: #FAFAFA;
     background-color: #18181B;
-    border: 1px solid #3F3F46;
+    border: 1px solid #202022;
     border-radius: 8px;
     padding: 10px 14px;
     width: 100%;
@@ -41,7 +41,7 @@
 
   input:focus, textarea:focus, select:focus {
     border-color: #5E6E4E;
-    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+    box-shadow: 0 0 0 3px rgba(5, 78, 21, 0.15);
   }
 
   input::placeholder, textarea::placeholder {
@@ -158,7 +158,7 @@
   }
 
   .btn-ghost:hover {
-    border-color: #52525B;
+    border-color: #515153;
     color: #FAFAFA;
     background: rgba(255, 255, 255, 0.05);
   }
@@ -179,7 +179,7 @@
   }
 
   .nav-link:hover { color: #FAFAFA; background: rgba(255,255,255,0.06); }
-  .nav-link.active { color: #E6EBDB; background: rgba(168,85,247,0.12); }
+  .nav-link.active { color: #E6EBDB; background: rgba(19, 105, 11, 0.12); }
 
   /* ── Badges ── */
   .badge {
@@ -301,7 +301,7 @@ html.light .glass-light {
 /* Nav */
 html.light .nav-link { color: #52525B; }
 html.light .nav-link:hover { color: #18181B; background: rgba(0,0,0,0.05); }
-html.light .nav-link.active { color: #5E6E4E; background: rgba(124,58,237,0.08); }
+html.light .nav-link.active { color: #5E6E4E; background: rgba(7, 88, 41, 0.08); }
 
 /* Buttons */
 html.light .btn-ghost {
