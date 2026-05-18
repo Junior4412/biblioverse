@@ -306,7 +306,7 @@ html.light .nav-link.active { color: #5E6E4E; background: rgba(124,58,237,0.08);
 /* Buttons */
 html.light .btn-ghost {
   border-color: #D4D4D8;
-  color: #52525B;
+  color: #3c3c41;
   background: transparent;
 }
 html.light .btn-ghost:hover {
@@ -353,7 +353,7 @@ html.light .text-zinc-100,
 html.light .text-zinc-200,
 html.light .text-zinc-300 { color: #27272A; }
 
-html.light .text-zinc-400 { color: #52525B; }
+html.light .text-zinc-400 { color: #2c2c2c; }
 html.light .text-zinc-500,
 html.light .text-zinc-600 { color: #71717A; }
 
@@ -384,8 +384,8 @@ html.light .hover\:bg-white\/4:hover { background: rgba(0,0,0,0.03); }
 html.light .hover\:bg-white\/5:hover { background: rgba(0,0,0,0.04); }
 html.light .hover\:bg-white\/6:hover { background: rgba(0,0,0,0.05); }
 
-html.light .bg-violet-500\/5 { background: rgba(124,58,237,0.05); }
-html.light .bg-violet-500\/10 { background: rgba(124,58,237,0.08); }
+html.light .bg-violet-500\/5 { background: rgba(5, 128, 56, 0.05); }
+html.light .bg-violet-500\/10 { background: rgba(8, 104, 51, 0.08); }
 
 /* Feed tabs */
 html.light .bg-zinc-900 { background-color: #F4F4F5; }
@@ -397,7 +397,7 @@ html.light .bg-zinc-900\/60 {
 }
 
 /* Section backgrounds */
-html.light .bg-zinc-950\/40 { background-color: rgba(185, 44, 44, 0.5); }
+html.light .bg-zinc-950\/40 { background-color: rgba(23, 139, 19, 0.5); }
 
 /* Stats section */
 html.light .border-zinc-800\/60 { border-color: #E4E4E7; }
