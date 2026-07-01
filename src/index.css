@@ -355,7 +355,7 @@ html.light .text-zinc-300 { color: #27272A; }
 
 html.light .text-zinc-400 { color: #2c2c2c; }
 html.light .text-zinc-500,
-html.light .text-zinc-600 { color: #71717A; }
+html.light .text-zinc-600 { color: #616164; }
 
 /* Backgrounds */
 html.light .bg-zinc-950\/95,
@@ -384,8 +384,8 @@ html.light .hover\:bg-white\/4:hover { background: rgba(0,0,0,0.03); }
 html.light .hover\:bg-white\/5:hover { background: rgba(0,0,0,0.04); }
 html.light .hover\:bg-white\/6:hover { background: rgba(0,0,0,0.05); }
 
-html.light .bg-violet-500\/5 { background: rgba(5, 128, 56, 0.05); }
-html.light .bg-violet-500\/10 { background: rgba(8, 104, 51, 0.08); }
+html.light .bg-green-500\/5 { background: rgba(5, 128, 56, 0.05); }
+html.light .bg-green-500\/10 { background: rgba(8, 104, 51, 0.08); }
 
 /* Feed tabs */
 html.light .bg-zinc-900 { background-color: #F4F4F5; }

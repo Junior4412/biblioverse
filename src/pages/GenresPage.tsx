@@ -23,7 +23,7 @@ export function GenresPage() {
               {genre.icon}
             </div>
             <div>
-              <p className="font-semibold text-foreground text-sm group-hover:text-violet-300 transition-colors">{genre.name}</p>
+              <p className="font-semibold text-foreground text-sm group-hover:text-green-300 transition-colors">{genre.name}</p>
               <p className="text-xs text-zinc-500 mt-0.5 flex items-center justify-center gap-1">
                 <BookOpen size={10} /> {genre.count.toLocaleString('pt-BR')} livros
               </p>
@@ -46,7 +46,7 @@ export function GenresPage() {
                   <h3 className="font-semibold text-foreground">{genre.name}</h3>
                   <button
                     onClick={() => navigate(`/books?genre=${encodeURIComponent(genre.name)}`)}
-                    className="ml-auto text-xs text-violet-400 hover:text-violet-300"
+                    className="ml-auto text-xs  text-[#5E6E4E] hover:text-green-300"
                   >
                     Ver todos →
                   </button>
@@ -63,7 +63,7 @@ export function GenresPage() {
                         alt={book.title}
                         className="w-full h-40 object-cover rounded-lg mb-3"
                       />
-                      <p className="text-sm font-medium text-foreground group-hover:text-violet-300 transition-colors line-clamp-1">{book.title}</p>
+                      <p className="text-sm font-medium text-foreground group-hover:text-green-300 transition-colors line-clamp-1">{book.title}</p>
                       <p className="text-xs text-zinc-500 mt-0.5">{book.author}</p>
                     </button>
                   ))}

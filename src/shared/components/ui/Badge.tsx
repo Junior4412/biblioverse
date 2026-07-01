@@ -7,9 +7,9 @@ interface BadgeProps {
 }
 
 const variants = {
-  primary: 'bg-violet-500/15 text-violet-400 border-violet-500/30',
+  primary: 'bg-green-500/15  text-[#5E6E4E] border-green-500/30',
   gold: 'bg-amber-500/15 text-amber-400 border-amber-500/30',
-  green: 'bg-green-500/15 text-green-400 border-green-500/30',
+  green: 'bg-green-500/15  text-[#5E6E4E] border-green-500/30',
   red: 'bg-red-500/15 text-red-400 border-red-500/30',
   muted: 'bg-zinc-800 text-zinc-400 border-zinc-700',
 }

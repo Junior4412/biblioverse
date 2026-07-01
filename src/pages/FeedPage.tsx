@@ -60,13 +60,13 @@ export function FeedPage() {
                 <h3 className="text-sm font-semibold text-foreground mb-3">Meta de Leitura 2025</h3>
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-xs text-muted">{user.currentGoal.current} de {user.currentGoal.target} livros</span>
-                  <span className="text-xs font-semibold text-violet-400">
+                  <span className="text-xs font-semibold  text-[#5E6E4E]">
                     {Math.round((user.currentGoal.current / user.currentGoal.target) * 100)}%
                   </span>
                 </div>
                 <div className="w-full h-2 bg-zinc-800 rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-gradient-to-r from-violet-600 to-violet-400 rounded-full transition-all"
+                    className="h-full bg-gradient-to-r from-green-600 to-green-400 rounded-full transition-all"
                     style={{ width: `${Math.round((user.currentGoal.current / user.currentGoal.target) * 100)}%` }}
                   />
                 </div>
@@ -87,7 +87,7 @@ export function FeedPage() {
                       <p className="text-xs font-medium text-foreground truncate">{u.name}</p>
                       <p className="text-xs text-muted">{u.booksRead} livros</p>
                     </div>
-                    <button className="text-xs px-2.5 py-1 rounded-lg border border-violet-500/40 text-violet-400 hover:bg-violet-500/10 transition-all">
+                    <button className="text-xs px-2.5 py-1 rounded-lg border border-green-500/40  text-[#5E6E4E] hover:bg-green-500/10 transition-all">
                       Seguir
                     </button>
                   </div>
@@ -107,7 +107,7 @@ export function FeedPage() {
                 onClick={() => setActiveTab(id)}
                 className={`flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
                   activeTab === id
-                    ? 'bg-violet-600/20 text-violet-300 border border-violet-500/30'
+                    ? 'bg-green-600/20 text-green-300 border border-green-500/30'
                     : 'text-zinc-500 hover:text-zinc-300'
                 }`}
               >
@@ -138,7 +138,7 @@ export function FeedPage() {
             {/* Trending books */}
             <div className="card-base p-5">
               <div className="flex items-center gap-2 mb-4">
-                <TrendingUp size={14} className="text-violet-400" />
+                <TrendingUp size={14} className=" text-[#5E6E4E]" />
                 <h3 className="text-sm font-semibold text-foreground">Em Alta Hoje</h3>
               </div>
               <div className="space-y-3">
@@ -154,7 +154,7 @@ export function FeedPage() {
                       }}
                     />
                     <div className="min-w-0">
-                      <p className="text-xs font-medium text-foreground group-hover:text-violet-400 transition-colors line-clamp-1">
+                      <p className="text-xs font-medium text-foreground group-hover: text-[#5E6E4E] transition-colors line-clamp-1">
                         {book.title}
                       </p>
                       <p className="text-xs text-muted">{book.author}</p>
@@ -169,7 +169,7 @@ export function FeedPage() {
               <h3 className="text-sm font-semibold text-foreground mb-4">Gêneros Populares</h3>
               <div className="flex flex-wrap gap-2">
                 {['Fantasia', 'Sci-Fi', 'Clássicos', 'Terror', 'Romance', 'Filosofia'].map((g) => (
-                  <span key={g} className="badge badge-primary text-xs cursor-pointer hover:bg-violet-500/25 transition-all">
+                  <span key={g} className="badge badge-primary text-xs cursor-pointer hover:bg-green-500/25 transition-all">
                     {g}
                   </span>
                 ))}

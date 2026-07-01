@@ -73,7 +73,7 @@ export function ReviewCard({ review }: ReviewCardProps) {
         {isLong && (
           <button
             onClick={() => setExpanded(!expanded)}
-            className="text-xs text-violet-400 hover:text-violet-300 mt-1 transition-colors"
+            className="text-xs  text-[#5E6E4E] hover:text-green-300 mt-1 transition-colors"
           >
             {expanded ? 'Ver menos' : 'Ver mais'}
           </button>
@@ -105,10 +105,10 @@ export function ReviewCard({ review }: ReviewCardProps) {
           <button
             onClick={() => setSaved(!saved)}
             className={`p-1.5 rounded-lg transition-all ${
-              saved ? 'text-violet-400' : 'text-zinc-600 hover:text-zinc-400'
+              saved ? ' text-[#5E6E4E]' : 'text-zinc-600 hover:text-zinc-400'
             }`}
           >
-            <Bookmark size={13} className={saved ? 'fill-violet-400' : ''} />
+            <Bookmark size={13} className={saved ? 'fill-green-400' : ''} />
           </button>
           <button className="p-1.5 rounded-lg text-zinc-600 hover:text-zinc-400 transition-all">
             <Share2 size={13} />

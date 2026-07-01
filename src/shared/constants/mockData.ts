@@ -296,17 +296,17 @@ export const MOCK_BADGES: Badge[] = [
 
 export const GENRES = [
   { name: 'Romance', icon: '💕', color: 'from-pink-500 to-rose-500', count: 1243 },
-  { name: 'Fantasia', icon: '🧙', color: 'from-violet-500 to-purple-600', count: 987 },
+  { name: 'Fantasia', icon: '🧙', color: 'from-green-500 to-[#5E6E4E]', count: 987 },
   { name: 'Ficção Científica', icon: '🚀', color: 'from-blue-500 to-cyan-500', count: 756 },
   { name: 'Terror', icon: '👻', color: 'from-gray-600 to-gray-900', count: 534 },
   { name: 'Filosofia', icon: '🤔', color: 'from-amber-500 to-orange-500', count: 423 },
   { name: 'Negócios', icon: '💼', color: 'from-green-500 to-emerald-600', count: 612 },
-  { name: 'Desenvolvimento Pessoal', icon: '🌱', color: 'from-teal-500 to-green-500', count: 789 },
+  { name: 'Desenvolvimento Pessoal', icon: '🌱', color: 'from-teal-500  to-[#5E6E4E]', count: 789 },
   { name: 'Tecnologia', icon: '💻', color: 'from-sky-500 to-blue-600', count: 345 },
   { name: 'HQs', icon: '💥', color: 'from-yellow-400 to-orange-500', count: 456 },
   { name: 'Mangás', icon: '⛩️', color: 'from-red-500 to-pink-500', count: 678 },
   { name: 'História', icon: '📜', color: 'from-stone-500 to-amber-600', count: 534 },
-  { name: 'Drama', icon: '🎭', color: 'from-indigo-500 to-violet-500', count: 321 },
+  { name: 'Drama', icon: '🎭', color: 'from-[#5E6E4E]  to-[#5E6E4E]', count: 321 },
   { name: 'Clássicos', icon: '🏛️', color: 'from-yellow-500 to-amber-500', count: 897 },
   { name: 'Suspense', icon: '🔍', color: 'from-slate-600 to-gray-700', count: 567 },
 ]

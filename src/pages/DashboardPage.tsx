@@ -34,7 +34,7 @@ export function DashboardPage() {
       {/* Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
         {[
-          { icon: BookOpen, label: 'Livros Lidos', value: user?.booksRead ?? 127, color: 'text-violet-400', bg: 'bg-violet-500/10' },
+          { icon: BookOpen, label: 'Livros Lidos', value: user?.booksRead ?? 127, color: ' text-[#5E6E4E]', bg: 'bg-green-500/10' },
           { icon: Star, label: 'Reviews', value: 43, color: 'text-amber-400', bg: 'bg-amber-500/10' },
           { icon: Flame, label: 'Streak Atual', value: `${user?.readingStreak ?? 47} dias`, color: 'text-orange-400', bg: 'bg-orange-500/10' },
           { icon: Award, label: 'Badges', value: earnedBadges.length, color: 'text-emerald-400', bg: 'bg-emerald-500/10' },
@@ -61,7 +61,7 @@ export function DashboardPage() {
               <div key={month} className="flex-1 flex flex-col items-center gap-1.5">
                 <div className="w-full flex items-end justify-center" style={{ height: '120px' }}>
                   <div
-                    className="w-full rounded-t-md bg-gradient-to-t from-violet-700 to-violet-500 transition-all"
+                    className="w-full rounded-t-md bg-gradient-to-t from-green-700  to-[#5E6E4E] transition-all"
                     style={{ height: `${(books / maxBooks) * 100}%`, minHeight: '4px' }}
                     title={`${books} livros`}
                   />
@@ -75,7 +75,7 @@ export function DashboardPage() {
         {/* Goal */}
         <div className="card-base p-6 flex flex-col">
           <div className="flex items-center gap-2 mb-4">
-            <Target size={16} className="text-violet-400" />
+            <Target size={16} className=" text-[#5E6E4E]" />
             <h2 className="font-semibold text-foreground">Meta de Leitura</h2>
           </div>
           <div className="flex-1 flex flex-col items-center justify-center">
@@ -116,7 +116,7 @@ export function DashboardPage() {
         {/* Genres */}
         <div className="card-base p-6">
           <h2 className="font-semibold text-foreground mb-4 flex items-center gap-2">
-            <TrendingUp size={16} className="text-violet-400" /> Gêneros Favoritos
+            <TrendingUp size={16} className=" text-[#5E6E4E]" /> Gêneros Favoritos
           </h2>
           <div className="space-y-3">
             {genreData.map(({ name, pct }) => (
@@ -127,7 +127,7 @@ export function DashboardPage() {
                 </div>
                 <div className="h-1.5 bg-zinc-800 rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-gradient-to-r from-violet-600 to-purple-500 rounded-full"
+                    className="h-full bg-gradient-to-r from-green-600  to-[#5E6E4E] rounded-full"
                     style={{ width: `${pct}%` }}
                   />
                 </div>
@@ -139,7 +139,7 @@ export function DashboardPage() {
         {/* Recent books */}
         <div className="card-base p-6">
           <h2 className="font-semibold text-foreground mb-4 flex items-center gap-2">
-            <Clock size={16} className="text-violet-400" /> Lidos Recentemente
+            <Clock size={16} className=" text-[#5E6E4E]" /> Lidos Recentemente
           </h2>
           <div className="space-y-3">
             {recentBooks.map((book) => (
@@ -161,7 +161,7 @@ export function DashboardPage() {
         {/* Badges */}
         <div className="card-base p-6">
           <h2 className="font-semibold text-foreground mb-4 flex items-center gap-2">
-            <Award size={16} className="text-violet-400" /> Conquistas
+            <Award size={16} className=" text-[#5E6E4E]" /> Conquistas
           </h2>
           <div className="grid grid-cols-3 gap-3">
             {MOCK_BADGES.map((badge) => (
@@ -169,7 +169,7 @@ export function DashboardPage() {
                 key={badge.id}
                 className={`flex flex-col items-center gap-1.5 p-2 rounded-xl transition-all ${
                   badge.earnedAt
-                    ? 'bg-violet-500/10 border border-violet-500/20'
+                    ? 'bg-green-500/10 border  border-[#5E6E4E]/20'
                     : 'bg-zinc-900/50 border border-zinc-800 opacity-40 grayscale'
                 }`}
                 title={badge.description}
@@ -185,7 +185,7 @@ export function DashboardPage() {
       {/* Recent reviews */}
       <div className="card-base p-6">
         <h2 className="font-semibold text-foreground mb-4 flex items-center gap-2">
-          <Star size={16} className="text-violet-400" /> Minhas Reviews Recentes
+          <Star size={16} className=" text-[#5E6E4E]" /> Minhas Reviews Recentes
         </h2>
         <div className="space-y-4">
           {userReviews.map((review) => (

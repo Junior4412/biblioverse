@@ -12,17 +12,17 @@ export function HomePage() {
     <div className="relative overflow-hidden">
       {/* Background effects */}
       <div className="fixed inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-violet-600/10 rounded-full blur-[120px]" />
-        <div className="absolute top-1/3 left-0 w-[400px] h-[400px] bg-purple-800/8 rounded-full blur-[100px]" />
-        <div className="absolute top-1/2 right-0 w-[350px] h-[350px] bg-violet-500/6 rounded-full blur-[80px]" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-green-600/10 rounded-full blur-[120px]" />
+        <div className="absolute top-1/3 left-0 w-[400px] h-[400px] bg-green-800/8 rounded-full blur-[100px]" />
+        <div className="absolute top-1/2 right-0 w-[350px] h-[350px] bg-green-500/6 rounded-full blur-[80px]" />
       </div>
 
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center px-6">
         <div className="max-w-5xl mx-auto text-center space-y-8">
           {/* Label */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-light border border-violet-500/20 text-sm animate-fade-in">
-            <Sparkles size={14} className="text-violet-400" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-light border  border-[#5E6E4E]/20 text-sm animate-fade-in">
+            <Sparkles size={14} className=" text-[#5E6E4E]" />
             <span className="text-zinc-400">A plataforma social para leitores</span>
           </div>
 
@@ -89,7 +89,7 @@ export function HomePage() {
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce-subtle">
           <div className="w-6 h-10 border-2 border-zinc-700 rounded-full flex items-start justify-center pt-2">
-            <div className="w-1 h-2 bg-violet-400 rounded-full" />
+            <div className="w-1 h-2 bg-[#5E6E4E]rounded-full" />
           </div>
         </div>
       </section>
@@ -116,14 +116,14 @@ export function HomePage() {
           <div className="flex items-center justify-between mb-10">
             <div>
               <div className="flex items-center gap-2 mb-2">
-                <TrendingUp size={16} className="text-violet-400" />
-                <span className="text-xs font-medium text-violet-400 uppercase tracking-widest">Em alta agora</span>
+                <TrendingUp size={16} className=" text-[#5E6E4E]" />
+                <span className="text-xs font-medium  text-[#5E6E4E] uppercase tracking-widest">Em alta agora</span>
               </div>
               <h2 className="font-display font-bold text-3xl text-foreground">Livros em Destaque</h2>
             </div>
             <Link
               to="/books"
-              className="flex items-center gap-2 text-sm text-zinc-500 hover:text-violet-400 transition-colors group"
+              className="flex items-center gap-2 text-sm text-zinc-500 hover: text-[#5E6E4E] transition-colors group"
             >
               Ver todos
               <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
@@ -149,14 +149,14 @@ export function HomePage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-2 mb-3">
-              <Zap size={16} className="text-violet-400" />
-              <span className="text-xs font-medium text-violet-400 uppercase tracking-widest">Funcionalidades</span>
+              <Zap size={16} className=" text-[#5E6E4E]" />
+              <span className="text-xs font-medium  text-[#5E6E4E] uppercase tracking-widest">Funcionalidades</span>
             </div>
             <h2 className="font-display font-bold text-4xl text-foreground mb-4">
               Tudo que um leitor precisa
             </h2>
             <p className="text-zinc-500 max-w-xl mx-auto">
-              Do simples rastreamento de leituras ao compartilhamento social — BiblioVerse cobre cada aspecto da sua jornada literária.
+              Do simples rastreamento de leituras ao compartilhamento social - Projeto Tâmaras cobre cada aspecto da sua jornada literária.
             </p>
           </div>
 
@@ -198,7 +198,7 @@ export function HomePage() {
                 className="card-base p-6 group"
               >
                 <div className="text-3xl mb-4">{icon}</div>
-                <h3 className="font-semibold text-foreground mb-2 group-hover:text-violet-300 transition-colors">{title}</h3>
+                <h3 className="font-semibold text-foreground mb-2 group-hover:text-green-300 transition-colors">{title}</h3>
                 <p className="text-sm text-zinc-500 leading-relaxed">{desc}</p>
               </div>
             ))}
@@ -219,7 +219,7 @@ export function HomePage() {
             </div>
             <Link
               to="/feed"
-              className="flex items-center gap-2 text-sm text-zinc-500 hover:text-violet-400 transition-colors group"
+              className="flex items-center gap-2 text-sm text-zinc-500 hover: text-[#5E6E4E] transition-colors group"
             >
               Ver feed completo
               <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
@@ -263,19 +263,19 @@ export function HomePage() {
         <div className="max-w-6xl mx-auto">
           <div className="card-base overflow-hidden relative">
             <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/70 to-transparent z-10" />
-            <div className="absolute inset-0 bg-gradient-to-br from-violet-900/20 to-transparent z-0" />
+            <div className="absolute inset-0 bg-gradient-to-br from-green-900/20 to-transparent z-0" />
 
             {/* Fake map bg */}
             <div className="absolute inset-0 opacity-20"
               style={{
-                backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%237C3AED' fill-opacity='0.3'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='#5E6E4E' fill-opacity='0.3'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
               }}
             />
 
             <div className="relative z-20 p-10 md:p-16 max-w-lg">
               <div className="flex items-center gap-2 mb-4">
-                <MapPin size={16} className="text-violet-400" />
-                <span className="text-xs font-medium text-violet-400 uppercase tracking-widest">Bibliotecas</span>
+                <MapPin size={16} className=" text-[#5E6E4E]" />
+                <span className="text-xs font-medium  text-[#5E6E4E] uppercase tracking-widest">Bibliotecas</span>
               </div>
               <h2 className="font-display font-bold text-3xl text-foreground mb-4">
                 Descubra Bibliotecas Próximas
@@ -299,8 +299,8 @@ export function HomePage() {
                   className="glass border border-zinc-700 rounded-xl px-4 py-3 flex items-center gap-3 animate-float"
                   style={{ animationDelay: `${i * 0.5}s` }}
                 >
-                  <div className="w-8 h-8 rounded-lg bg-violet-500/20 flex items-center justify-center">
-                    <MapPin size={14} className="text-violet-400" />
+                  <div className="w-8 h-8 rounded-lg bg-[#5E6E4E]/20flex items-center justify-center">
+                    <MapPin size={14} className=" text-[#5E6E4E]" />
                   </div>
                   <div>
                     <p className="text-xs font-semibold text-foreground">{lib}</p>
@@ -318,7 +318,7 @@ export function HomePage() {
 
       {/* CTA Final */}
       <section className="py-32 px-6 relative">
-        <div className="absolute inset-0 bg-gradient-radial from-violet-900/20 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-radial from-green-900/20 via-transparent to-transparent" />
         <div className="max-w-3xl mx-auto text-center relative">
           <h2 className="font-display font-black text-5xl md:text-6xl text-foreground mb-6 leading-tight">
             Pronto para explorar<br />

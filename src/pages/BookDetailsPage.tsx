@@ -80,7 +80,7 @@ export function BookDetailsPage() {
                 onClick={() => handleStatusChange(sId)}
                 className={`w-full flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-medium border transition-all ${
                   readingStatus === sId
-                    ? 'bg-violet-600/20 border-violet-500 text-violet-300'
+                    ? 'bg-green-600/20 border-green-500 text-green-300'
                     : 'border-zinc-700 text-zinc-400 hover:border-zinc-500 hover:text-zinc-200'
                 }`}
               >
@@ -143,7 +143,7 @@ export function BookDetailsPage() {
             <button className="p-2.5 rounded-lg border border-zinc-700 text-zinc-400 hover:text-red-400 hover:border-red-500/50 transition-all">
               <Heart size={18} />
             </button>
-            <button className="p-2.5 rounded-lg border border-zinc-700 text-zinc-400 hover:text-violet-400 hover:border-violet-500/50 transition-all">
+            <button className="p-2.5 rounded-lg border border-zinc-700 text-zinc-400 hover: text-[#5E6E4E] hover:border-green-500/50 transition-all">
               <Bookmark size={18} />
             </button>
             <button className="p-2.5 rounded-lg border border-zinc-700 text-zinc-400 hover:text-zinc-200 transition-all">
@@ -155,7 +155,7 @@ export function BookDetailsPage() {
 
       {/* Write review section */}
       {(showReviewForm || readingStatus === 'completed') && (
-        <div className="card-base p-6 mb-8 border-violet-500/30">
+        <div className="card-base p-6 mb-8 border-green-500/30">
           <h2 className="font-display font-semibold text-xl text-foreground mb-4">
             {readingStatus === 'completed' ? '📝 Escreva sua review (obrigatório)' : 'Escrever Review'}
           </h2>

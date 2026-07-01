@@ -28,12 +28,12 @@ export function LoginPage() {
       {/* Left side — form */}
       <div className="flex-1 flex items-center justify-center px-6 py-12 relative">
         {/* Subtle glow */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-violet-600/10 rounded-full blur-[80px] pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-green-600/10 rounded-full blur-[80px] pointer-events-none" />
 
         <div className="w-full max-w-md space-y-8 relative">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 mb-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-500 to-purple-700 flex items-center justify-center shadow-glow-sm">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-green-700 flex items-center justify-center shadow-glow-sm">
               <BookOpen size={16} className="text-white" />
             </div>
             <span className="font-display font-bold text-lg">
@@ -85,7 +85,7 @@ export function LoginPage() {
                 <input type="checkbox" className="rounded border-zinc-700 bg-zinc-900" />
                 <span className="text-sm text-zinc-400">Lembrar de mim</span>
               </label>
-              <a href="#" className="text-sm text-violet-400 hover:text-violet-300 transition-colors">
+              <a href="#" className="text-sm  text-[#5E6E4E] hover:text-green-300 transition-colors">
                 Esqueci a senha
               </a>
             </div>
@@ -134,7 +134,7 @@ export function LoginPage() {
 
           <p className="text-center text-sm text-zinc-500">
             Não tem conta?{' '}
-            <Link to="/register" className="text-violet-400 hover:text-violet-300 transition-colors font-medium">
+            <Link to="/register" className=" text-[#5E6E4E] hover:text-green-300 transition-colors font-medium">
               Criar gratuitamente
             </Link>
           </p>
@@ -143,8 +143,8 @@ export function LoginPage() {
 
       {/* Right side — visual */}
       <div className="hidden lg:flex flex-1 relative overflow-hidden bg-zinc-950">
-        <div className="absolute inset-0 bg-gradient-to-br from-violet-900/30 via-purple-900/20 to-transparent" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-violet-600/20 rounded-full blur-[80px]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-green-900/30 via-green-900/20 to-transparent" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-green-600/20 rounded-full blur-[80px]" />
 
         {/* Floating book cards */}
         <div className="relative w-full h-full flex items-center justify-center">
@@ -162,7 +162,7 @@ export function LoginPage() {
                 className="glass border border-zinc-700/50 rounded-xl p-4 animate-float"
                 style={{ animationDelay: delay }}
               >
-                <div className="w-full aspect-[3/4] bg-gradient-to-br from-violet-800/40 to-purple-900/40 rounded-lg mb-3 flex items-center justify-center text-3xl">
+                <div className="w-full aspect-[3/4] bg-gradient-to-br from-green-800/40 to-green-900/40 rounded-lg mb-3 flex items-center justify-center text-3xl">
                   📚
                 </div>
                 <p className="text-xs font-semibold text-foreground line-clamp-1">{title}</p>

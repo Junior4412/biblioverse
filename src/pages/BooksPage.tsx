@@ -61,7 +61,7 @@ export function BooksPage() {
           </select>
           <button
             onClick={() => setFiltersOpen(!filtersOpen)}
-            className={`p-2.5 rounded-lg border transition-all ${filtersOpen ? 'border-violet-500 bg-violet-500/10 text-violet-400' : 'border-zinc-700 text-zinc-400 hover:border-zinc-500'}`}
+            className={`p-2.5 rounded-lg border transition-all ${filtersOpen ? 'border-green-500 bg-green-500/10 text-green-400' : 'border-zinc-700 text-zinc-400 hover:border-zinc-500'}`}
           >
             <SlidersHorizontal size={16} />
           </button>

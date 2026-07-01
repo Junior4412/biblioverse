@@ -48,12 +48,12 @@ export function RegisterPage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center px-6 py-12 relative">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-violet-600/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-green-600/10 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="w-full max-w-md space-y-8 relative">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-500 to-purple-700 flex items-center justify-center">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center">
             <BookOpen size={16} className="text-white" />
           </div>
           <span className="font-display font-bold text-lg">
@@ -71,7 +71,7 @@ export function RegisterPage() {
           {steps.map((s, i) => (
             <div key={s} className="flex items-center gap-2 flex-1">
               <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition-all ${
-                i < step ? 'bg-violet-600 text-white' : i === step ? 'bg-violet-600 text-white ring-4 ring-violet-500/20' : 'bg-zinc-800 text-zinc-500'
+                i < step ? 'bg-green-600 text-white' : i === step ? 'bg-green-600 text-white ring-4 ring-green-500/20' : 'bg-zinc-800 text-zinc-500'
               }`}>
                 {i < step ? <Check size={14} /> : i + 1}
               </div>
@@ -157,7 +157,7 @@ export function RegisterPage() {
                     onClick={() => toggleGenre(genre)}
                     className={`px-3 py-2 rounded-lg text-xs font-medium border transition-all ${
                       selectedGenres.includes(genre)
-                        ? 'bg-violet-600/20 border-violet-500 text-violet-300'
+                        ? 'bg-green-600/20 border-green-500 text-green-300'
                         : 'bg-transparent border-zinc-700 text-zinc-400 hover:border-zinc-500'
                     }`}
                   >
@@ -185,7 +185,7 @@ export function RegisterPage() {
 
         <p className="text-center text-sm text-zinc-500">
           Já tem conta?{' '}
-          <Link to="/login" className="text-violet-400 hover:text-violet-300 transition-colors font-medium">
+          <Link to="/login" className=" text-[#5E6E4E] hover:text-green-300 transition-colors font-medium">
             Entrar
           </Link>
         </p>

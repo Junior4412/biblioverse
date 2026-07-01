@@ -82,7 +82,7 @@ export function LibrariesPage() {
 
       <p className="text-center text-sm text-zinc-600 mt-8">
         Mais bibliotecas sendo adicionadas continuamente. Conhece uma biblioteca que não está aqui?{' '}
-        <button className="text-violet-400 hover:text-violet-300">Nos envie!</button>
+        <button className=" text-[#5E6E4E] hover:text-green-300">Nos envie!</button>
       </p>
     </div>
   )
