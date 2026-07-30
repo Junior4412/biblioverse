@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { BookOpen, Eye, EyeOff, Loader2, ArrowRight } from 'lucide-react'
 import { useAuthStore } from '../store'
-import { CURRENT_USER } from '../shared/constants/mockData'
+import { mapAuthUser, supabase } from '../lib/supabase'
 import toast from 'react-hot-toast'
 
 export function LoginPage() {
@@ -16,9 +16,14 @@ export function LoginPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
-    await new Promise((r) => setTimeout(r, 1200))
-    login(CURRENT_USER, 'demo-token')
-    toast.success('Bem-vinda de volta, Ana! 📚')
+    const { data, error } = await supabase.auth.signInWithPassword({ email, password })
+    if (error) {
+      toast.error(error.message === 'Invalid login credentials' ? 'Email ou senha incorretos.' : error.message)
+      setLoading(false)
+      return
+    }
+    login(mapAuthUser(data.user), data.session.access_token)
+    toast.success('Bem-vindo de volta! 📚')
     navigate('/feed')
     setLoading(false)
   }
