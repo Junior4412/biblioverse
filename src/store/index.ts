@@ -1,25 +1,48 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import type { User } from '../shared/types'
-import { CURRENT_USER } from '../shared/constants/mockData'
+import { mapAuthUser, supabase } from '../lib/supabase'
 
 interface AuthState {
   user: User | null
   token: string | null
   isAuthenticated: boolean
+  initialized: boolean
   login: (user: User, token: string) => void
-  logout: () => void
+  initialize: () => Promise<void>
+  logout: () => Promise<void>
   updateUser: (user: Partial<User>) => void
 }
 
 export const useAuthStore = create<AuthState>()(
   persist(
     (set) => ({
-      user: CURRENT_USER, // pre-logged for demo
-      token: 'demo-token',
-      isAuthenticated: true,
+      user: null,
+      token: null,
+      isAuthenticated: false,
+      initialized: false,
       login: (user, token) => set({ user, token, isAuthenticated: true }),
-      logout: () => set({ user: null, token: null, isAuthenticated: false }),
+      initialize: async () => {
+        const { data } = await supabase.auth.getSession()
+        const session = data.session
+        set({
+          user: session ? mapAuthUser(session.user) : null,
+          token: session?.access_token ?? null,
+          isAuthenticated: Boolean(session),
+          initialized: true,
+        })
+        supabase.auth.onAuthStateChange((_event, nextSession) => {
+          set({
+            user: nextSession ? mapAuthUser(nextSession.user) : null,
+            token: nextSession?.access_token ?? null,
+            isAuthenticated: Boolean(nextSession),
+          })
+        })
+      },
+      logout: async () => {
+        await supabase.auth.signOut()
+        set({ user: null, token: null, isAuthenticated: false })
+      },
       updateUser: (data) =>
         set((state) => ({
           user: state.user ? { ...state.user, ...data } : null,
@@ -27,6 +50,7 @@ export const useAuthStore = create<AuthState>()(
     }),
     {
       name: 'biblioverse-auth',
+      partialize: (state) => ({ user: state.user }),
     }
   )
 )

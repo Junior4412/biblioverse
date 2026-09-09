@@ -10,8 +10,15 @@ import { RegisterPage } from './pages/RegisterPage'
 import { DashboardPage } from './pages/DashboardPage'
 import { GenresPage } from './pages/GenresPage'
 import { LibrariesPage } from './pages/LibrariesPage'
+import { useAuthStore } from './store'
 
 export default function App() {
+  const initialize = useAuthStore((state) => state.initialize)
+
+  useEffect(() => {
+    void initialize()
+  }, [initialize])
+
   return (
     <BrowserRouter>
       <Toaster
@@ -41,3 +48,4 @@ export default function App() {
     </BrowserRouter>
   )
 }
+import { useEffect } from 'react'

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { BookOpen, Eye, EyeOff, Loader2, ArrowRight, Check } from 'lucide-react'
 import { useAuthStore } from '../store'
-import { CURRENT_USER } from '../shared/constants/mockData'
+import { mapAuthUser, supabase } from '../lib/supabase'
 import toast from 'react-hot-toast'
 
 const steps = ['Conta', 'Perfil', 'Preferências']
@@ -33,10 +33,33 @@ export function RegisterPage() {
 
   const handleSubmit = async () => {
     setLoading(true)
-    await new Promise((r) => setTimeout(r, 1500))
-    login(CURRENT_USER, 'demo-token')
-    toast.success('Conta criada! Bem-vindo ao BiblioVerse 🎉')
-    navigate('/feed')
+    const { data, error } = await supabase.auth.signUp({
+      email: form.email,
+      password: form.password,
+      options: {
+        data: {
+          name: form.name,
+          username: form.username.replace(/^@/, ''),
+          profession: form.profession,
+          city: form.city,
+          bio: form.bio,
+          favorite_genres: selectedGenres,
+        },
+      },
+    })
+    if (error) {
+      toast.error(error.message)
+      setLoading(false)
+      return
+    }
+    if (data.session && data.user) {
+      login(mapAuthUser(data.user), data.session.access_token)
+      toast.success('Conta criada! Bem-vindo ao BiblioVerse 🎉')
+      navigate('/feed')
+    } else {
+      toast.success('Conta criada! Confirme seu email para entrar.')
+      navigate('/login')
+    }
     setLoading(false)
   }
 
